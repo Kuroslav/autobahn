@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +22,7 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    border-bottom: 1px solid rgb(128, 128, 128);
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .logo-container {
@@ -88,7 +92,7 @@ i{
     height: 80vh;
     width: 100%;
     overflow: hidden;
-    margin-top: 80px;
+    margin-top: 75px;
 }
 
 .hero-background {
@@ -100,9 +104,8 @@ i{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     filter: blur(5px);
-    background-image: url("/images/soutez_cls.PNG");
+    background-image: url("/images/krasni.webp");
     z-index: 1;
 }
 
@@ -113,9 +116,11 @@ i{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 0;
     z-index: 2;
     text-align: center;
     padding: 0 20px;
+    cursor: default;
 }
 
 .hero-content::before {
@@ -130,13 +135,87 @@ i{
 }
 
 .content{
-    border-top: 1px solid rgb(128, 128, 128);
+    border-top: 2px solid rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container{
+h1{
+    font-size: 100px;
+}
+
+p{
+    font-size: 20px;
+}
+
+h2{
     margin-top: 50px;
+    font-size: 50px;
+    cursor: default;
+}
+
+.containers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+.container{
+    height: 30vh;
+    width: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    background-color:#1e1e1e;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.container h2{
+    font-size: 25px;
+}
+
+.container i{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container:hover{
+    transform: translateY(-2px);
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(138, 138, 138, 0.3);
+}
+
+.container:hover i{
+    transform: scale(1.1);
+    transition: transform 0.3s ease 0s, color 0.3s ease 0s;
+}
+
+.footer{
+    border-top: 2px solid rgb(255, 255, 255);
+    bottom: 0;
+    margin-top: 10%;
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    .containers {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
