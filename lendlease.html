@@ -6,6 +6,8 @@
     <title>Autobahn - Nemovitosti</title>
 
     <link rel="stylesheet" href="styles/timer.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/loader.css">
 
 
     <script src="https://kit.fontawesome.com/3e6e8225e1.js" crossorigin="anonymous"></script>
@@ -15,17 +17,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="header">
-        <nav class="navbar">
-            <div class="logo-container">
-                <div class="logo"><a href="index.html"><i class="fa-solid fa-road"></i>AUTOBAHN</a></div>
-            </div>
-            <div class="nav-links">
-                <a href="lendlease.html" class="nav-link"><i class="fa-solid fa-hand-holding-dollar"></i>Pronájem nemovitostí</a>
-                <a href="sell.html" class="nav-link"><i class="fa-solid fa-car"></i>Prodej Vozidel</a>
-            </div>
-        </nav>
-    </section>
+    <div class="loader">
+        <div class="folder">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="title">getting everything ready...</div>
+      </div>
+
+
+<section class="header">
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo"><a href="index.html"><i class="fa-solid fa-road"></i>AUTOBAHN</a></div>
+        </div>
+        <div class="nav-links">
+            <a href="lendlease.html" class="nav-link"><i class="fa-solid fa-hand-holding-dollar"></i>Pronájem nemovitostí</a>
+            <a href="sell.html" class="nav-link"><i class="fa-solid fa-car"></i>Prodej Vozidel</a>
+        </div>
+    </nav>
+</section>
+
+<nav class="mobile-navbar">
+    <a href="index.html" class="nav-icon">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="lendlease.html" class="nav-icon active">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+    </a>
+    <a href="sell.html" class="nav-icon">
+        <i class="fa-solid fa-car"></i>
+    </a>
+</nav>
 
         <div class="timer-container">
         <h1>Odpočet Času</h1>
@@ -53,5 +76,7 @@
     </div>
 
     <script src="scripts/timer.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/active.js"></script>
 </body>
 </html>
